@@ -1,0 +1,33 @@
+2.300 	 1.100
+
+	NoCutoff
+
+N		 time
+#"Potential Energy (kJ/mole)"
+-14087.384573936462
+200		time = 3.063s
+#"Potential Energy (kJ/mole)"
+-14197.610124588013
+400		time = 6.105s
+
+	Ewald
+
+N		 time
+#"Potential Energy (kJ/mole)"
+-8753.009999609323
+200		time = 1.360s
+#"Potential Energy (kJ/mole)"
+-10192.836166833618
+400		time = 2.669s
+
+	PME
+
+N		 time
+#"Potential Energy (kJ/mole)"
+-8822.664720874283
+200		time = 0.966s
+#"Potential Energy (kJ/mole)"
+-10272.383879276927
+400		time = 1.827s
+
+Water box with 1158 atoms

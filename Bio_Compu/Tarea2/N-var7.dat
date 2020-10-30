@@ -1,0 +1,30 @@
+4.000 	 1.500
+
+	NoCutoff
+
+N		 time
+200		time = 88.267s
+400		time = 175.039s
+600		time = 264.489s
+800		time = 349.403s
+1000		time = 440.851s
+
+	Ewald
+
+N		 time
+200		time = 104.258s
+400		time = 207.320s
+600		time = 303.679s
+800		time = 404.242s
+1000		time = 514.970s
+
+	PME
+
+N		 time
+200		time = 9.587s
+400		time = 18.148s
+600		time = 26.732s
+800		time = 35.414s
+1000		time = 44.275s
+
+Water box with 6282 atoms

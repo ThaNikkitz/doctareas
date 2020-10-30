@@ -1,0 +1,63 @@
+6.000 	 2.000
+
+	NoCutoff
+
+N		 time
+150		time = 390.565s
+160		time = 422.090s
+170		time = 455.548s
+180		time = 480.294s
+190		time = 500.677s
+200		time = 535.346s
+210		time = 562.405s
+220		time = 586.015s
+230		time = 609.381s
+240		time = 634.783s
+250		time = 658.830s
+260		time = 696.073s
+270		time = 714.179s
+280		time = 742.671s
+290		time = 769.966s
+300		time = 802.401s
+
+	Ewald
+
+N		 time
+150		time = 926.673s
+160		time = 986.521s
+170		time = 1045.438s
+180		time = 1114.099s
+190		time = 1172.889s
+200		time = 1232.135s
+210		time = 1297.442s
+220		time = 1359.147s
+230		time = 1422.187s
+240		time = 1486.713s
+250		time = 1549.697s
+260		time = 1607.532s
+270		time = 1669.588s
+280		time = 1728.844s
+290		time = 1789.708s
+300		time = 1852.629s
+
+	PME
+
+N		 time
+150		time = 12.183s
+160		time = 12.655s
+170		time = 13.559s
+180		time = 14.298s
+190		time = 15.119s
+200		time = 16.073s
+210		time = 16.826s
+220		time = 17.561s
+230		time = 18.457s
+240		time = 19.468s
+250		time = 20.019s
+260		time = 20.834s
+270		time = 21.621s
+280		time = 22.417s
+290		time = 23.175s
+300		time = 24.154s
+
+Water box with 21384 atoms
