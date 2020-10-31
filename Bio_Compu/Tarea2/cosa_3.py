@@ -4,13 +4,13 @@ import time
 import sys
 
 L_side = 6.0 #nm
-pme_cutoff = 2.5 #nm. <L_side/2 
+pme_cutoff = 1.5 #nm. <L_side/2 
 
 N_steps = 200
 
 # Try: nonbondedMethod: NoCutoff, Ewald, PME
 
-water_box = testsystems.WaterBox(box_edge=L_side*unit.nanometer, nonbondedMethod = openmm.app.PME, nonbondedCutoff=pme_cutoff*unit.nanometers, ewaldErrorTolerance = 0.0005)
+water_box = testsystems.WaterBox(box_edge=L_side*unit.nanometer, nonbondedMethod = openmm.app.Ewald, nonbondedCutoff=pme_cutoff*unit.nanometers, ewaldErrorTolerance = 0.0005)
 system = water_box.system
 
 print("Water box with %i atoms"%len(water_box.positions))
