@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.26)  30 OCT 2020 22:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.26)  30 OCT 2020 23:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -774,14 +774,31 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-Underfull \hbox (badness 10000) in paragraph at lines 33--36
+(./Figures/scheme.eps_tex
+Package epstopdf Info: Source file: <./Figures/scheme.eps>
+(epstopdf)                    date: 2020-10-30 23:12:40
+(epstopdf)                    size: 12697 bytes
+(epstopdf)             Output file: <./Figures/scheme-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-10-30 23:12:53
+(epstopdf)                    size: 4311 bytes
+(epstopdf)             Command: <repstopdf --outfile=./Figures/scheme-eps-conve
+rted-to.pdf ./Figures/scheme.eps>
+(epstopdf)             \includegraphics on input line 56.
+Package epstopdf Info: Output file is already uptodate.
 
- []
 
-[1
+pdfTeX warning: /usr/bin/pdflatex (file ./Figures/scheme-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<./Figures/scheme-eps-converted-to.pdf, id=20, 141.52875pt x 82.3075pt>
+File: ./Figures/scheme-eps-converted-to.pdf Graphic file (type pdf)
+<use ./Figures/scheme-eps-converted-to.pdf>
+Package pdftex.def Info: ./Figures/scheme-eps-converted-to.pdf  used on input l
+ine 56.
+(pdftex.def)             Requested size: 272.16243pt x 158.30989pt.
+) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 54--57
+Underfull \hbox (badness 10000) in paragraph at lines 60--63
 
  []
 
@@ -789,8 +806,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.71 \section
-             {Particle-Mesh Ewald}\label{sec:PME} [2] (./Figures/PME.eps_tex
+l.66 \end{gather*}
+                   [2 <./Figures/scheme-eps-converted-to.pdf>]
+(./Figures/PME.eps_tex
 Package epstopdf Info: Source file: <./Figures/PME.eps>
 (epstopdf)                    date: 2020-10-30 18:52:50
 (epstopdf)                    size: 3884 bytes
@@ -805,46 +823,44 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Figures/PME-eps-converted-to.pdf): PD
 F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./Figures/PME-eps-converted-to.pdf, id=52, 330.23375pt x 204.765pt>
+<./Figures/PME-eps-converted-to.pdf, id=54, 330.23375pt x 204.765pt>
 File: ./Figures/PME-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Figures/PME-eps-converted-to.pdf>
 Package pdftex.def Info: ./Figures/PME-eps-converted-to.pdf  used on input line
  56.
 (pdftex.def)             Requested size: 329.65741pt x 204.41454pt.
 )
-<./Figures/plot1.pdf, id=57, 632.121pt x 332.80273pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./Figures/plot1.pdf, id=59, 632.121pt x 332.80273pt>
 File: ./Figures/plot1.pdf Graphic file (type pdf)
 <use ./Figures/plot1.pdf>
-Package pdftex.def Info: ./Figures/plot1.pdf  used on input line 84.
+Package pdftex.def Info: ./Figures/plot1.pdf  used on input line 90.
 (pdftex.def)             Requested size: 316.05972pt x 166.40096pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.87 W
-      e worked with three points due to the limitations of computing on a no...
-[3 <./Figures/PME-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
-
- []
-
-<./Figures/plot2.pdf, id=71, 675.40771pt x 332.31654pt>
+l.93 \noindent
+               [3]
+<./Figures/plot2.pdf, id=76, 675.40771pt x 332.31654pt>
 File: ./Figures/plot2.pdf Graphic file (type pdf)
 <use ./Figures/plot2.pdf>
-Package pdftex.def Info: ./Figures/plot2.pdf  used on input line 92.
+Package pdftex.def Info: ./Figures/plot2.pdf  used on input line 98.
 (pdftex.def)             Requested size: 337.70303pt x 166.15785pt.
-<./Figures/plot4.pdf, id=72, 632.121pt x 332.80273pt>
+<./Figures/plot3.pdf, id=78, 632.121pt x 332.80273pt>
+File: ./Figures/plot3.pdf Graphic file (type pdf)
+<use ./Figures/plot3.pdf>
+Package pdftex.def Info: ./Figures/plot3.pdf  used on input line 104.
+(pdftex.def)             Requested size: 221.24567pt x 116.4827pt.
+<./Figures/plot4.pdf, id=79, 675.40771pt x 332.31654pt>
 File: ./Figures/plot4.pdf Graphic file (type pdf)
 <use ./Figures/plot4.pdf>
-Package pdftex.def Info: ./Figures/plot4.pdf  used on input line 98.
-(pdftex.def)             Requested size: 316.05972pt x 166.40096pt.
+Package pdftex.def Info: ./Figures/plot4.pdf  used on input line 105.
+(pdftex.def)             Requested size: 236.39624pt x 116.31252pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--105
+Underfull \hbox (badness 10000) in paragraph at lines 93--109
 
  []
 
@@ -852,32 +868,42 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.105 
-       [4 <./Figures/plot2.pdf> <./Figures/plot1.pdf
+l.109 \subsection
+                 *{Conclusions} [4 <./Figures/PME-eps-converted-to.pdf> <./Figu
+res/plot1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 110--112
 
-pdfTeX warning: /usr/bin/pdflatex (file ./Figures/plot1.pdf): PDF inclusion: mu
-ltiple pdfs with page group included in a single page
->]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has
- been already used, duplicate ignored
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.114 \end{document}
-                     [5 <./Figures/plot4.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 114.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 114.
+l.121 \end{document}
+                     [5 <./Figures/plot2.pdf> <./Figures/plot3.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Figures/plot3.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+> <./Figures/plot4.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Figures/plot4.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 121.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 121.
  (./Tarea2_Nicolas_Espinoza.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 114.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 114.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 121.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 121.
 Package rerunfilecheck Info: File `Tarea2_Nicolas_Espinoza.out' has not changed
 .
 (rerunfilecheck)             Checksum: 9DE78ED9A7468A24E0525222B818F992;157.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 114.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 121.
  ) 
 Here is how much of TeX's memory you used:
- 18073 strings out of 494923
- 328774 string characters out of 6180742
- 401987 words of memory out of 5000000
- 21012 multiletter control sequences out of 15000+600000
+ 18088 strings out of 494923
+ 329185 string characters out of 6180742
+ 401058 words of memory out of 5000000
+ 21021 multiletter control sequences out of 15000+600000
  16536 words of font info for 63 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  55i,13n,54p,1177b,653s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -895,10 +921,10 @@ msfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Tarea2_Nicolas_Espinoza.pdf (5 pages, 207851 bytes).
+Output written on Tarea2_Nicolas_Espinoza.pdf (5 pages, 227698 bytes).
 PDF statistics:
- 271 PDF objects out of 1000 (max. 8388607)
- 133 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 328 PDF objects out of 1000 (max. 8388607)
+ 146 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 67 words of extra memory for PDF output out of 10000 (max. 10000000)
 
