@@ -1,0 +1,12 @@
+#Number of particles
+@particles 300 
+#Number of cycles
+@cycles 1000 
+#Max energy per dimension
+@MaxEnergy 100
+#Equilibration steps, < @cycles 
+@equilibration 100  
+#Tot energy of the system
+@TotEnergy 30000
+# random seed generator (if no declared, results are no reproducible)
+#@RandomSeed 1

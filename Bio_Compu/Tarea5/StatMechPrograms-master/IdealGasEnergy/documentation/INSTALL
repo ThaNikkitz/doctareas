@@ -1,0 +1,21 @@
+#Libraries for Ideal Gas program
+
+%sudo apt-get install gsl-bin libgsl0-dev
+%sudo apt-get install libboost-all-dev
+%make
+
+IdealGas.arg Input file
+
+#To run:
+
+%./IdealGas @f IdealGas.arg
+
+#Output files
+
+% energy_distribution.dat: distribution of states, based 
+% 
+
+
+Excersises:
+
+Plot both files and 

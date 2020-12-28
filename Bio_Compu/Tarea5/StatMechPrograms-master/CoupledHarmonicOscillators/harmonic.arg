@@ -1,0 +1,5 @@
+@oscillators 5000
+@cycles  1000000
+@equilibration 100000
+@TotEnergy 5000
+@CalcEntropy 2

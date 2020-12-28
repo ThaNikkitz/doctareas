@@ -1,0 +1,133 @@
+%keywords section definiton
+\def\keywords{\vspace{.5em}
+{\textit{Keywords}:\,\relax%
+}}
+\def\endkeywords{\par}
+
+\def\abbreviations{\vspace{.5em}
+{\textit{Abbreviations}:\,\relax%
+}}
+\def\endabbreviations{\par}
+
+\title{Ideal Gas}
+
+\author{
+       Computational Biology 2018
+}
+%\date{}
+\documentclass[10pt]{article}
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage{bm}
+\usepackage{setspace}
+\usepackage {listings}
+\begin{document}
+\maketitle
+\pagebreak
+\section{Introduction}
+\subsection{Theoretical Background \cite{IMSSS}}
+
+In the lecture we derived the energy levels of a quantum ideal gas particle in a box of length $L$ :
+
+
+\begin{equation} % requires amsmath; align* for no eq. number
+   E_{nx,ny,nz}=E_{\bf{n}}=\frac{h^2}{8mL^2}[{n_x}^2+{n_y}^2+{n_z}^2]\quad \text{with}\quad n_i=1,2,3....
+   \label{equation:1.1} 
+\end{equation}
+% 
+where $h$ is Planck’s constant and $n_i$ are three quantum numbers that define the eigenstate of the particle. In a real ideal gas, particles exchange energy by collisions. In our approximation, we do not take the precise motion and positions of particles into account. Therefore, only energy conservation has to be considered. This is very similar to the previous Coupled Harmonic oscillators example. However, given that the energy levels are not equidistant, during binary collision, the energy lost by a particle $i$ cannot always be exactly compensated by the energy gain of particle $j$.
+
+\begin{enumerate}
+
+\item Show that when particle $i$ in state $\bm{n}=(2,2,3)$ changes to  $\bm{n}=(2,2,2)$, the energy loss cannot be compensated by an energy gain of particle $j$ originally in state $\bm{n}=(1,1,1)$.
+
+\end{enumerate}  
+
+
+
+\subsection{Program}
+
+A method exists to deal with the previous problem, called the Maxwell demon method\cite{Demon,STP}. In brief, the demon behaves as an auxiliary particles that stores or gives energy. In detail:
+
+ \begin{enumerate}
+
+\item Set up an initial microstate with a desired total energy $E$ and assign an initial energy to the demon (normally zero).
+\item Make a trial change in the microstate. In this case, randomly select a particle and a dimension and randomly increase or decrease the energy by one unit.
+\item Compute the change in energy of the system, $\Delta E$. if $\Delta E \leq 0$, accept the change and increase the energy of the demon by $|\Delta E|$. If $\Delta E > 0$, accept the change, if the demon has enough energy to give to the system, and reduce the demon's energy by $\Delta E$. The only constraint is that the demon's (and any particle) must remain greater or equal to a lower bound, which we take to be zero.If a trail change is not accepted, the existing microstate is counted in the averages. In either case the total energy $E$ plus the energy of the demon $E_d$ remains constant.
+\item Repeat steps 2 and 3 many times. 
+
+\end{enumerate}
+
+For simplicity $h^2/8mL^2$ is set to 1.
+
+
+
+\section{Instructions}
+
+\subsection{Install}
+
+To compile and install the program run the following commands:
+
+\begin{lstlisting}[language=bash]
+$ cd Tutorial_5/IdealGasEnergy
+$ make
+\end{lstlisting} 
+%
+in the working directory you will find the compiled binary 
+
+\begin{lstlisting}[language=bash]
+$ IdealGas
+\end{lstlisting} 
+
+
+\subsection{Usage}
+
+
+
+\begin{lstlisting}[language=bash]
+$ vi IdealGas.arg
+\end{lstlisting} 
+
+\begin{itemize}
+
+\item @particles   = Number or particles.
+\item @cycles = The number of cycles.
+\item @MaxEnergy = Maximum energy per dimension.
+\item @equilibrium = set up the entropy calculation and the initial conditions.
+\item @TotEnergy = Total energy of the system + demon.
+\end{itemize}
+
+The number of cycles is proportional to the number of times that an attempt is made to transfer an energy package from one particle to the demon. A larger number of cycles means more accurate results, but it also takes more computer time. You will have to develop some sort of feeling for how many cycles are needed to obtain results that are accurate enough, When you run the program again using other values for the input parameters,the old output files are overwritten. 
+
+To run the program:
+
+\begin{lstlisting}[language=bash]
+$ \.IdealGas @f IdealGas.arg > results.out
+\end{lstlisting} 
+
+Two files will be generated :
+
+\begin{lstlisting}[language=bash]
+$ energy_distribution.dat : Unnormalized histogram of the energy states of 
+the first particle.
+$ et.dat : Energy and state trajectory of the first particle.
+\end{lstlisting}
+
+
+\section{Exercises}
+
+\begin{enumerate}
+  \item From simulation output (et.dat), plot a histogram of $P(E_{\bf{n}})$ as function of energy.
+  \item From simulation output (energy\_distribution.dat) plot a scatter plot of Counts vs energy. 
+  \item Explain the differences between both probability distributions.
+
+\item Verify that $P(E_{\bf{n}})=\frac{\exp (\beta E_{\bf{n}})}{q}$  
+
+\end{enumerate}
+
+
+
+\bibliographystyle{unsrt}
+\bibliography{ref.bib}
+
+\end{document}

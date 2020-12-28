@@ -1,0 +1,74 @@
+%keywords section definiton
+\def\keywords{\vspace{.5em}
+{\textit{Keywords}:\,\relax%
+}}
+\def\endkeywords{\par}
+
+\def\abbreviations{\vspace{.5em}
+{\textit{Abbreviations}:\,\relax%
+}}
+\def\endabbreviations{\par}
+
+\title{Coupled Harmonic Oscillators: Entropy and NVT ensemble}
+
+\author{
+        Classical Statistical Mechanics Course \\
+        Practical Excercise  I         
+}
+%\date{}
+\documentclass[10pt]{article}
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage{setspace}
+\begin{document}
+\maketitle
+\pagebreak
+\section{Introduction}
+\subsection{Theoretical Background \cite{IMSSS}}
+From elementary quantum mechanics, we know that a harmonic oscillator has equally spaced
+energy levels:
+\begin{equation} % requires amsmath; align* for no eq. number
+   E_n =(n+1/2)\hbar\omega \text{       with } k=0,1..... 
+   \label{equation:1.1} 
+\end{equation}
+%
+where $h = \hbar/2\pi$ is Planck’s constant and $\omega$ is the eigenfrequency of the oscillator. Suppose that we have a system of $N$ independent harmonic oscillators. Each harmonic oscillator can emit a photon that can be absorbed immediately by another oscillator. In this system the individual oscillators may have different energies. A configuration of the system is given by ($k_1, k_2, ..., k_N$), where $k_n$ is the state of oscillator $n$. The energy of oscillator $n$ is denoted by $E(n) = E_{k_n}$. If the system is isolated, the total energy $E$ is constant and is given by
+
+\begin{equation} % requires amsmath; align* for no eq. number
+   E_T =E_T(k_1,k_2,...,k_N)=\sum_{n=0}^N E_{k_n}=E_0+\sum_{n=1}^N \hbar\omega k_n=E_0 +\epsilon\sum_{n=0}^N k_n 
+   \label{equation:1.1} 
+\end{equation}
+%
+with $E_0 = N\hbar\omega /2$, \emph{i.e.} the ground state energy of N oscillators and $\epsilon = \hbar \omega$
+
+\subsection{Program}
+
+Before solving the previous system analytically, we will explore it "experimentally" using a simple computer program. The computer program simulates a system of $N$ harmonic oscillators, each of which may have an energy $ E(n)=0,\hbar\omega,2\hbar\omega,...$. For simplicity we have set the ground state energy equal to zero and $\hbar\omega = 1 $. The total energy $E$
+and the number of oscillators $N$ are input for the program. One step in the simulation consists of selecting two different oscillators A and B at random. Next, the program attempts to increase the energy of oscillator A by 1 and at the same time decrease the energy of B by 1. If the energy of B becomes negative, the trial is rejected. We work in the following with reduced units \emph{i.e.} $E_k^* = \frac{E_k - E_0}{\epsilon}$ with $k =0,1,2....$
+
+\section{Instructions}
+
+Note that in this exercise $\epsilon = 1$ is set to 1, which means that the energy of an oscillator can be $0, 1, 2, 3,...$  . Go to the directory HarmonicOscillators (so type cd
+HarmonicOscillators). In the "harmonic.arg" input file you can change the total energy,$E^*$, stored in the system (@TotEnergy), the number of oscillators,$N$ (@oscillators), the number of cycles (@cycles), the number of equilibration steps (@equilibration). Additionally, the   @CalcEntropy set up the entropy calculation and the initial conditions: 0 no entropy calculation; 1 energy is distributed equally among oscillators; 2 All energy packets are given to the first oscillator. The number of cycles is proportional to the number of times that an attempt is made to transfer an energy package from one oscillator to another. A larger number of cycles means more accurate results, but it also takes more computer time. You will have to develop some sort of feeling for how many cycles are needed to obtain results that are accurate enough, When you run the program again using other values for the input parameters,the old output files are overwritten. The energy of the first oscillator is sampled during the simulation and saved (in the form of a normalized frequency histogram) in the output file "hist.dat".
+
+The program computes the entropy of the isolated system by:
+
+
+\begin{equation} % requires amsmath; align* for no eq. number
+  \ln \Omega(N_0,N_1,N_2,...)=\frac{\ln(N!)}{}
+   \label{equation:1.1} 
+\end{equation}
+
+\subsection{Questions}
+
+\begin{enumerate}
+  \item Run the given computer program. Find out how they can be influenced by changing N and E. Hint: do not take too many or too few oscillators and take E/N not more than a few times
+  \item Make a histogram of $P(k)$, the probability that a given oscillator has an energy $k$. Determine by trial and error how many configurations must be taken in order to have a reasonable signal to noise
+ratio in P (k). Is your result influenced by the value of N?
+  \item Run the simulation for $N=5000$ and $E^* = 5000$. By plotting, verify that $P(k)$ depends exponentially on $k$ and determine  the fitting constant $\beta$ and $Q$ in the equation $P(k) = \frac{\exp(-\beta\epsilon k)}{Q}$. Do the same for a few choices of $E/N$.
+\end{enumerate}
+
+\bibliographystyle{unsrt}
+\bibliography{ref.bib}
+
+\end{document}

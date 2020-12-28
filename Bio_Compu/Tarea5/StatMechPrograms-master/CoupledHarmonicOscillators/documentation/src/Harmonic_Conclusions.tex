@@ -1,0 +1,87 @@
+%keywords section definiton
+\def\keywords{\vspace{.5em}
+{\textit{Keywords}:\,\relax%
+}}
+\def\endkeywords{\par}
+
+\def\abbreviations{\vspace{.5em}
+{\textit{Abbreviations}:\,\relax%
+}}
+\def\endabbreviations{\par}
+
+\title{Coupled Harmonic Oscillators}
+
+\author{
+       Computational Biology 2018      
+}
+%\date{}
+\documentclass[10pt]{article}
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage{setspace}
+\begin{document}
+\maketitle
+\pagebreak
+\section{Conclusions \cite{IMSSS}}
+
+\subsection{Question 3}
+From our simulation experiment in question 3, it follows that the probability distribution for
+a given state $k$ of a single harmonic oscillator reads:
+
+\begin{equation} % requires amsmath; align* for no eq. number
+   P(k)=\frac{\exp[-\beta E_k]}{q}
+   \label{equation:1.1} 
+\end{equation}
+%
+with constants $\beta$ and $q$. In statistical thermodynamics the numerator $\exp[-\beta E_k]$ is called the Boltzmann factor. The constant $q$ is called the molecular partition function or molecular partition sum, defined as the sum of Boltzmann factors over all states of the oscillator.
+
+\begin{equation} % requires amsmath; align* for no eq. number
+   q=\sum_{k=0}^{\infty}\exp[-\beta E_k]
+   \label{equation:1.2} 
+\end{equation}
+%
+Substituting $x=\exp(-\beta\hbar\omega)$ we can rewrite the partition sum of $q$ of a harmonic oscillator as a geometric series employing:
+
+\begin{equation} % requires amsmath; align* for no eq. number
+   \sum_{i=0}^{\infty} x^i=\frac{1}{1-x} \quad \text{for}\quad|x|<1
+   \label{equation:1.3} 
+\end{equation}
+%
+thus:
+
+\begin{equation} % requires amsmath; align* for no eq. number
+   q=\frac{1}{1-\exp[-\beta E_k]} 
+   \label{equation:1.4} 
+\end{equation}
+
+The average energy $\langle E_i\rangle$ of a single oscillator can be related to $\beta$  using the same substitution as in eq. \eqref{equation:1.3} and employing :
+
+\begin{equation} % requires amsmath; align* for no eq. number
+   \sum_{i=0}^{\infty} ix^i=\frac{x}{(1-x)^2} \quad \text{for}\quad|x|<1
+   \label{equation:1.5} 
+\end{equation}
+%
+which is eq \eqref{equation:1.3} diferentiated with respect to $x$ and multiplied by $x$, leads to the following relation:
+
+\begin{equation} % requires amsmath; align* for no eq. number
+   \langle E_i\rangle=\sum_{k=0}^{\infty}\hbar\omega kP(k)=\hbar\omega\frac{\sum_{k=0}^{\infty}k\exp[-\beta \hbar\omega k]}{\sum_{k=0}^{\infty}\exp[-\beta \hbar\omega k]}=\frac{\hbar\omega}{\exp[-\beta \hbar\omega ]-1}
+   \label{equation:1.6} 
+\end{equation}
+%
+
+The latter means that for big enough number of oscillators, a single oscillator $i$ is surrounded by a "heath bath". The temperature follows from the total energy E, which in turn determines  $ \langle E_i\rangle$ and $\beta$.Thus, from the average energy $ \langle E_i\rangle$ and the relation $\beta=1/k_BT$ we can estimate the temperature of the simulated system. 
+
+\begin{enumerate}
+\item For a number of system energies ($E_t$) use simulation data to find $ \langle E_i\rangle$ and $\beta$. Check your results with eq. \eqref{equation:1.6} 
+\end{enumerate}
+
+
+\subsection{Question 4}
+From our simulation experiment in question 4, it follows that the entropy increase in time ands  reaches maximum value when we start from the less likely distribution.
+
+
+\bibliographystyle{unsrt}
+\bibliography{ref.bib}
+
+
+\end{document}

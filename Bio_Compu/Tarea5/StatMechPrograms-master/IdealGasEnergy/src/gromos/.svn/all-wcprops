@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/gromos++/!svn/ver/1812/trunk/gromos++/src/gromos
+END
+Exception.cc
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gromos++/!svn/ver/3/trunk/gromos++/src/gromos/Exception.cc
+END
+Exception.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/gromos++/!svn/ver/1150/trunk/gromos++/src/gromos/Exception.h
+END
+Exception.t.cc
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/gromos++/!svn/ver/1812/trunk/gromos++/src/gromos/Exception.t.cc
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/gromos++/!svn/ver/1310/trunk/gromos++/src/gromos/Makefile.am
+END

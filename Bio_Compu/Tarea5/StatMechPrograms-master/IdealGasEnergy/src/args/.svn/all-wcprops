@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/gromos++/!svn/ver/2141/trunk/gromos++/src/args
+END
+ReferenceParser.cc
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/gromos++/!svn/ver/551/trunk/gromos++/src/args/ReferenceParser.cc
+END
+OutformatParser.cc
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/gromos++/!svn/ver/1789/trunk/gromos++/src/args/OutformatParser.cc
+END
+ReferenceParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/gromos++/!svn/ver/1184/trunk/gromos++/src/args/ReferenceParser.h
+END
+OutformatParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/gromos++/!svn/ver/1789/trunk/gromos++/src/args/OutformatParser.h
+END
+BoundaryParser.cc
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/gromos++/!svn/ver/1900/trunk/gromos++/src/args/BoundaryParser.cc
+END
+BoundaryParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/gromos++/!svn/ver/1851/trunk/gromos++/src/args/BoundaryParser.h
+END
+Arguments.cc
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/gromos++/!svn/ver/2020/trunk/gromos++/src/args/Arguments.cc
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gromos++/!svn/ver/1789/trunk/gromos++/src/args/Makefile.am
+END
+Arguments.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/gromos++/!svn/ver/2141/trunk/gromos++/src/args/Arguments.h
+END
+Arguments.t.cc
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/gromos++/!svn/ver/1812/trunk/gromos++/src/args/Arguments.t.cc
+END
+GatherParser.cc
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/gromos++/!svn/ver/1956/trunk/gromos++/src/args/GatherParser.cc
+END
+GatherParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/gromos++/!svn/ver/1812/trunk/gromos++/src/args/GatherParser.h
+END

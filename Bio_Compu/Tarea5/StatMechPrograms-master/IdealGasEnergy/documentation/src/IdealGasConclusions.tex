@@ -1,0 +1,87 @@
+%keywords section definiton
+\def\keywords{\vspace{.5em}
+{\textit{Keywords}:\,\relax%
+}}
+\def\endkeywords{\par}
+
+\def\abbreviations{\vspace{.5em}
+{\textit{Abbreviations}:\,\relax%
+}}
+\def\endabbreviations{\par}
+
+\title{Ideal Gas}
+
+\author{
+       Computational Biology 2018
+}
+%\date{}
+\documentclass[10pt]{article}
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage{setspace}
+\usepackage{bm}
+\begin{document}
+\maketitle
+\pagebreak
+\section{Conclusions \cite{IMSSS}}
+
+\subsection{Question 4}
+From our simulation experiment, it follows that the partition function has the form:
+
+
+\begin{equation} % requires amsmath; align* for no eq. number
+   q=\sum_{\bf{n}}\exp[-\beta E_{\bf{n}}]=\sum_{\bf{n}}\exp\left[ -\frac{\beta h^2(n_x^2+n_y^2+n_z^2)}{8mL^2}  \right]=\left(\sum_{n}^{\infty}\exp\left[ -\frac{\beta h^2n^2}{8mL^2}  \right]\right)^3
+   \label{equation:1.1} 
+\end{equation}
+%
+where the power of 3 is due to the fact the the summations over the three quantum numbers $n_x,n_y,n_z$ are independent of each other. For the average energy energy of one particle we find:
+
+\begin{equation} % requires amsmath; align* for no eq. number
+   \langle E \rangle = \frac{1}{q}\sum_{\bf{n}}E_{\bf{n}}\exp[-\beta E_{\bf{n}}]=\frac{3}{q^{1/3}}\sum_{n=1}^{\infty}\frac{h^2n^2}{8mL^2}\exp\left[ - \frac{\beta h^2n^2}{8mL^2}  \right]
+   \label{equation:1.2} 
+\end{equation}
+%
+In the lectures we derived an aproximation for $q$ via the semiclassical approximation. We will take a similar route.
+
+For all practical circumstances, \emph{i.e.} realistic size and temperature, many terms will contribute to the summations of eqs. \eqref{equation:1.1} and \eqref{equation:1.2}, thus they can be treated as continuous variables. Indeed for $\alpha < < 1$ we can employ:
+
+\begin{equation} % requires amsmath; align* for no eq. number
+   \sum_{n=1}^{\infty} \exp[-\alpha n^2]\approx \int_0^\infty dn\exp[-\alpha n^2]=\frac{1}{2}\sqrt{\frac{\pi}{\alpha}}
+   \label{equation:1.3} 
+\end{equation}
+%
+and
+
+\begin{equation} % requires amsmath; align* for no eq. number
+   \sum_{n=1}^{\infty} n^2\exp[-\alpha n^2]\approx \int_0^\infty dn n^2\exp[-\alpha n^2]=\frac{1}{4\alpha}\sqrt{\frac{\pi}{\alpha}}
+   \label{equation:1.4} 
+\end{equation}
+%
+Employing these approximations for eqs. \eqref{equation:1.1} and \eqref{equation:1.2}, we get:
+
+\begin{equation} % requires amsmath; align* for no eq. number
+   q=\left( \frac{\pi}{4\alpha}\right)^{3/2}=\left(  \frac{L}{\Lambda} \right)^3=\frac{V}{\Lambda^3}
+   \label{equation:1.5} 
+\end{equation}
+%
+with
+
+\begin{equation} % requires amsmath; align* for no eq. number
+   \Lambda \equiv \frac{h}{\sqrt{2\pi mk_BT}}=\frac{h}{\sqrt{2\pi m/\beta}}
+   \label{equation:1.6} 
+\end{equation}
+%
+if often called the thermal wavelength. For $\langle E\rangle $ we get 
+
+\begin{equation} % requires amsmath; align* for no eq. number
+   \langle E\rangle=\frac{3}{2\beta}=\frac{3}{2}k_BT
+   \label{equation:1.7} 
+\end{equation}
+
+Try to derive the relations by yourself!!!
+
+\bibliographystyle{unsrt}
+\bibliography{ref.bib}
+
+
+\end{document}

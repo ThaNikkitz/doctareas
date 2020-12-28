@@ -1,0 +1,28 @@
+Programs for Computational Biology Course:
+
+-CoupledHarmonicOscillators
+
+Simulates N coupled quantum harmonic oscillators. Entropy and energy distribution estimations.
+
+-IdealGasEnergy
+
+Simulates N quantum ideal Gas particles in 3D by the "Maxwell Demon" algorithm. Energy distribution estimation.
+
+-velocityVerlteSho
+
+Molecular Dynamics simulation of a single classical harmonic oscillator with the velocity verlet algorithm.
+
+Prerequisites (linux):
+
+g++
+gcc
+make
+gsl (GNU scientific library)
+
+For compilation instructions, in each program directory type (in Ubuntu and derivatives):
+
+$sudo apt-get install libgsl-dev g++ gcc make libboost-all-dev
+
+$ make
+
+In each documentation directory you will find usage instructions.

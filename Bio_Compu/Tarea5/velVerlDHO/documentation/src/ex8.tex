@@ -1,0 +1,116 @@
+\documentclass[a4paper,12pt]{article}
+%\batchmode
+\usepackage[dvips]{color}
+\usepackage{lscape}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{amsfonts}
+\usepackage{units} % for nicefrac
+\voffset-1.5cm
+\textwidth15.5cm
+\textheight22.5cm
+\hoffset-1.5cm
+
+\setlength{\headheight}{60pt}
+
+\renewcommand{\baselinestretch}{1.2}
+
+\newcommand{\abs}[1]{\ensuremath{\left\vert\left\vert#1\right\vert\right\vert}}
+
+\pagestyle{fancy}
+
+\renewcommand{\headrulewidth}{0.4pt} %
+\renewcommand{\footrulewidth}{0pt} %
+\fancyhead[L]{
+              Computational Biology Course
+              } %
+\fancyfoot[C]{\thepage} %
+
+\newcommand{\deadline}[1]{{\bf Deadline:} #1\vspace{0.5cm}} %
+
+
+\makeatletter
+\def\maketitle{%
+  \begin{center}
+    {\Large \bf Exercise Sheet \@title\par}%
+    \vskip 0.5cm
+    {\normalfont \@date\par}%
+  \end{center}%
+    \vskip 1.0cm
+  }
+\makeatother
+
+
+
+
+
+
+\begin{document}
+% EDIT EXERCISE NUMBER AND EXERCISE DATE
+\title{{Velocity Verlet MD}}
+\date{}
+\maketitle
+
+
+% INSERT QUESTIONS HERE
+%
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+%
+%
+%
+\begin{enumerate}
+%\item Consider a pendulum of length $l$ with mass $m$, as shown in Figure 1.
+%A gravitational field of uniform acceleration $g$ is acting on the mass.
+%\begin{figure}[h!]
+%\vspace{1cm}
+%\centering
+%\includegraphics[width=0.4\textwidth]{pic}
+%\caption{A simple pendulum of length $l$ and mass $m$. $\theta$ denotes the angle between the pendulum and the vertical.}
+%\end{figure}
+%\begin{itemize}
+%\item Verify that the potential energy of the pendulum is given by $E_{\mathit pot} =   m g l ( 1 - \cos \theta)$, where $\theta$ denotes the angle between the pendulum and the vertical as shown in Figure 1. 
+%\item Based on the  generalized coordinate $\theta$, write down the
+%Lagrangian of the system and the equation of motion using the Lagrangian formalism.
+%\item Show that the
+%conjugate momentum of $\theta$ is $p_{\theta}=ml^2\dot{\theta}$, 
+%write down the
+%Hamiltonian of the system and the equations of motion using the Hamiltonian formalism.
+%\end{itemize}
+\item A C-program \texttt{velocityVerletSho.c} is provided which integrates
+the equation of motion for the simple harmonic oscillator according to the Velocity-Verlet algorithm. For simplicity, the mass and force constant are defined
+as  \texttt{MASS=1} and \texttt{K=1}, respectively. The initial conditions are defined as $\texttt{X0=1}$ (coordinate)
+and \texttt{V0=0} (velocity). 
+The number of integration steps is \texttt{NSTEPS}  and the time step size is given by \texttt{deltat = Tper / TFAC}, where \texttt{Tper} is the period of oscillation and \texttt{TFAC} is the number of time steps per period of oscillation.
+The program can be compiled with\\
+\noindent \texttt{gcc -o velocityVerletSho program/velocityVerletSho.c}\\
+\noindent and run with\\
+\noindent \texttt{./velocityVerletSho} \\
+\noindent For each time step, it prints the time in units of period, coordinate, momentum, total energy 
+\begin{equation}
+E_{\mathit{tot}} = \frac{1}{2} m v^2 + \frac{1}{2}  k x^2
+\end{equation}
+ %and the energy of the shadow Hamiltonian,
+%\begin{equation}
+%\tilde{E}_{\mathit{tot}} = \frac{1}{2} m v^2 \left[1-(\omega \Delta t/2)^2\right]^{-1} + %\frac{1}{2}  k x^2 \quad .
+%\end{equation}
+The output can be written to a file \texttt{out.dat} with \\
+\noindent  \texttt{./velocityVerletSho} $>$ \texttt{out.dat} \\
+\noindent That is, in this file, there are five columns which report
+the time in units of period, coordinate, momentum, total energy and the energy of the shadow Hamiltonian, respectively.
+\begin{itemize}
+\item Look at the program and verify the equation of motion of the simple harmonic oscillator, as well as the equations of the Velocity-Verlet algorithm.
+\item Edit, compile and run the program for variables \texttt{TFAC=10}, \texttt{50} and \texttt{100} and write corresponding output data to files
+\texttt{out10.dat},
+\texttt{out50.dat} and
+\texttt{out100.dat}, respectively.
+\item Make phase space plots for the three above runs, {\em i.e.} plot the momentum {\em vs.} the coordinate. Interpret.
+\item Plot the energy {\em vs.} time. Interpret.
+%\item Plot the energy of the shadow Hamiltonian {\em vs.} time. It is conserved exactly by the Velocity-Verlet algorithm. Thus, is the Velocity-Verlet algorithm symplectic?
+\end{itemize}
+\end{enumerate}
+%
+%
+%
+\end{document}
